@@ -110,7 +110,8 @@ int main(int argc, char** argv) {
 		unsigned width, height;
 
 		unsigned decError = lodepng::decode(image, width, height, imageFile);
-		if (decError) cout << "decoder error " << decError << ": " << lodepng_error_text(decError) << endl;
+		if (decError) cout << "decoder error " << decError << ": " 
+						   << lodepng_error_text(decError) << endl;
 
 		// check to make sure there is space for the whole string
 		if (text.length() > image.size()) {
@@ -123,7 +124,8 @@ int main(int argc, char** argv) {
 
 		// re-encode the new image data into a new png file
 		unsigned encError = lodepng::encode(destFile, image, width, height);
-		if (encError) cout << "encoder error " << encError << ": " << lodepng_error_text(encError) << endl;
+		if (encError) cout << "encoder error " << encError << ": " 
+						   << lodepng_error_text(encError) << endl;
 	}
 
 	// DECODE MODE
@@ -141,7 +143,8 @@ int main(int argc, char** argv) {
 		unsigned width, height;
 
 		unsigned decError = lodepng::decode(image, width, height, imageFile);
-		if (decError) cout << "decoder error " << decError << ": " << lodepng_error_text(decError) << endl;
+		if (decError) cout << "decoder error " << decError << ": " 
+						   << lodepng_error_text(decError) << endl;
 
 		// read the hidden message out of the image
 		decode_text(image, text);
