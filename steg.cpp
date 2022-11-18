@@ -1,3 +1,13 @@
+//************************************************************************
+// steg.cpp 
+//
+// Author: Caleb Willson
+// Date: 11-16-22
+//
+// Summary: Provides a command line interface for encoding raw text into
+//          a png file.
+//************************************************************************
+
 #include <stdlib.h>
 #include <iostream>
 #include <sstream>
